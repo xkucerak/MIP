@@ -4,15 +4,16 @@
 \documentclass{beamer}
 
 %\usetheme{Warsaw}
-%\usetheme{Antibes}
-\usetheme{JuanLesPins}
+\usetheme{Antibes}
+%\usetheme{JuanLesPins}
 %\usetheme{Goettingen}
 
-\usecolortheme{seahorse}
+%\usecolortheme{seahorse}
 %\usecolortheme{dolphin}
 %\usecolortheme{rose}
 % http://deic.uab.es/~iblanes/beamer_gallery/index_by_color.html
 %\usecolortheme{beaver}
+\usecolortheme{orchid}
 
 %\useoutertheme[]{sidebar}
 
@@ -123,20 +124,19 @@
 
 
 
-\section{Ďalšia časť}
+\section{Knižnice}
 
-\begin{frame}[fragile=singleslide]\frametitle{Ďalší slajd}
+\begin{frame}[fragile=singleslide]\frametitle{Knižnice}
 \begin{itemize}
-\item Nejaký text
-\item Ďalší text -- \emph{zvýraznený text}
-\item \emp{Kľúčová poznámka} % príkaz definovaný v preambule
+\item Requests\footcite{\url{https://pypi.org/project/requests/}}
+\item Beautiful Soup\footcite{\url{https://pypi.org/project/beautifulsoup4/}}
+\item Scrapy\footcite{\url{https://pypi.org/project/Scrapy/}}
+\item Selenium\footcite{\url{https://pypi.org/project/selenium/}}
 
-% odrážka s odkazom na zdroj:
-\item Bol použitý balík beamer\footcite{\url{http://www.tex.ac.uk/tex-archive/macros/latex/contrib/beamer/doc/beameruserguide.pdf}}
 \end{itemize}
 \end{frame}
 
-
+\section{princíp}
 \begin{frame}[fragile=singleslide]\frametitle{Princíp extrakcie dát}
 \includegraphics[scale=0.75]{diag.png}
 % pridajte vlastný obrázok a zrušte znák % pred príkazom \includegraphics vo formáte PDF prípadne PNG alebo JPG
@@ -145,9 +145,10 @@
 {\tiny Nejaká poznámka k obrázku, možno zdroj\ldots}
 \end{frame}
 
+\section{príklad}
 \begin{frame}[fragile=singleslide]\frametitle{Jednoduchý príklad}
 \begin{poznamka}
-Vypísanie názvu stránky
+Vypísanie názvu stránky pomocou knižnice Beautiful Soup
 \end{poznamka}
 
 \begin{itemize}
