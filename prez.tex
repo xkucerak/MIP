@@ -24,6 +24,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage{url}
 
+\usepackage{array}
+
 \usepackage{listings}
 
 \lstset{language=Python,basicstyle=\fontsize{8}{9.6}\selectfont,showstringspaces=false,columns=fullflexible,identifierstyle=\ttfamily,keywordstyle=\bfseries,showstringspaces=false,columns=fullflexible}
@@ -72,7 +74,7 @@
 
 
 
-\author{Štefan Kučerák}
+\author{Štefan Kučerák\\{\tiny\url{xkucerak@fiit.stuba.sk}}}
 %\url{www.fiit.stuba.sk/~vranic}, \url{vranic@fiit.stuba.sk}}
 %{\tiny \url{www.fiit.stuba.sk/~vranic}, \url{vranic@fiit.stuba.sk}}
 \institute{
@@ -82,10 +84,9 @@
 
 \subtitle{\vspace{3mm} Metódy inžinierskej práce 2023/2024}
 
-\title{Extrakcia informácii z webu pre analýzu dát pomocou Pythonu
-}
+\title{Extrakcia informácii z webu pre analýzu dát pomocou Pythonu}
 
-\date{\footnotesize 6. november 2023}
+\date{\footnotesize 26. november 2023}
 
 
 
@@ -127,16 +128,20 @@
 \section{Knižnice}
 
 \begin{frame}[fragile=singleslide]\frametitle{Knižnice}
-\begin{itemize}
-\item Requests\footcite{\url{https://pypi.org/project/requests/}}
-\item Beautiful Soup\footcite{\url{https://pypi.org/project/beautifulsoup4/}}
-\item Scrapy\footcite{\url{https://pypi.org/project/Scrapy/}}
-\item Selenium\footcite{\url{https://pypi.org/project/selenium/}}
-
-\end{itemize}
+\begin{center}
+\begin{table}[]
+\begin{tabular}{ l | p{2.5in} }
+Knižnica & Popis \\\hline
+Requests\footcite{\url{https://pypi.org/project/requests/}} & HTTP požiadavky a to POST aj GET\\
+Beautiful Soup\footcite{\url{https://pypi.org/project/beautifulsoup4/}} & táto knižnica obsahuje nástroje na html alebo xml\\
+Scrapy\footcite{\url{https://pypi.org/project/Scrapy/}} & je rýchly framework pre prehľadávanie webu na vysokej úrovni\\
+Selenium\footcite{\url{https://pypi.org/project/selenium/}} & je knižnica, ktorá je web driver
+\end{tabular}
+\end{table}
+\end{center}
 \end{frame}
 
-\section{princíp}
+\section{Princíp}
 \begin{frame}[fragile=singleslide]\frametitle{Princíp extrakcie dát}
 \includegraphics[scale=0.75]{diag.png}
 % pridajte vlastný obrázok a zrušte znák % pred príkazom \includegraphics vo formáte PDF prípadne PNG alebo JPG
@@ -145,7 +150,7 @@
 {\tiny Nejaká poznámka k obrázku, možno zdroj\ldots}
 \end{frame}
 
-\section{príklad}
+\section{Príklad}
 \begin{frame}[fragile=singleslide]\frametitle{Jednoduchý príklad}
 \begin{poznamka}
 Vypísanie názvu stránky pomocou knižnice Beautiful Soup
