@@ -69,12 +69,12 @@
 %\insertpagenumber
 %\begin{beamercolorbox}{section in head/foot}
 %\vskip2pt\insertnavigation{\paperwidth}\vskip2pt
-%\nd{beamercolorbox}%
+%\end{beamercolorbox}%
 }
 
 
 
-\author{Štefan Kučerák\\{\tiny\url{xkucerak@fiit.stuba.sk}}}
+\author{Štefan Kučerák\\{\tiny\url{xkucerak@stuba.sk}}}
 %\url{www.fiit.stuba.sk/~vranic}, \url{vranic@fiit.stuba.sk}}
 %{\tiny \url{www.fiit.stuba.sk/~vranic}, \url{vranic@fiit.stuba.sk}}
 \institute{
@@ -86,7 +86,7 @@
 
 \title{Extrakcia informácii z webu pre analýzu dát pomocou Pythonu}
 
-\date{\footnotesize 26. november 2023}
+\date{\footnotesize 27. november 2023}
 
 
 
@@ -98,49 +98,48 @@
 \end{frame}
 
 
-\begin{frame}[fragile=singleslide]\frametitle{Úvod}
-
+\begin{frame}[fragile=singleslide]\frametitle{Introduction}
+Web scraping:
 \begin{itemize}
-\item automatizované zbieranie dát z web stránok
-\item časová náročnosť
+\item automated data collection from websites
+\item obtaining a large amount of data in a short time 
 \end{itemize}
 
 \end{frame}
 
-\begin{frame}[fragile=singleslide]\frametitle{Prehľad}
+\begin{frame}[fragile=singleslide]\frametitle{Overview}
 \tableofcontents
 \end{frame}
 
-\section{Princíp}
-\begin{frame}[fragile=singleslide]\frametitle{Princíp extrakcie dát}
+\section{Principle of data extraction}
+\begin{frame}[fragile=singleslide]\frametitle{The principle of data extraction}
 \includegraphics[scale=0.75]{diag.png}
 % pridajte vlastný obrázok a zrušte znák % pred príkazom \includegraphics vo formáte PDF prípadne PNG alebo JPG
 % scale určuje veľkosť obrázku
 
-{\tiny Nejaká poznámka k obrázku, možno zdroj\ldots}
+{\tiny Principle of data extraction.}
 \end{frame}
 
-\begin{frame}[fragile=singleslide]\frametitle{Knižnice}
+\begin{frame}[fragile=singleslide]\frametitle{Libraries}
 \begin{center}
 \begin{table}[]
 \begin{tabular}{ l | p{2.5in} }
-Knižnica & Popis \\\hline
-Requests\footcite{\url{https://pypi.org/project/requests/}} & HTTP požiadavky a to POST aj GET\\
-Beautiful Soup\footcite{\url{https://pypi.org/project/beautifulsoup4/}} & táto knižnica obsahuje nástroje na html alebo xml\\
-Scrapy\footcite{\url{https://pypi.org/project/Scrapy/}} & je rýchly framework pre prehľadávanie webu na vysokej úrovni\\
-Selenium\footcite{\url{https://pypi.org/project/selenium/}} & je knižnica, ktorá je web driver
-\end{tabular}
+Library& Description\\\hline
+Requests\footcite{\url{https://pypi.org/project/requests/}} & HTTP requests using POST and GET\\
+Beautiful Soup\footcite{\url{https://pypi.org/project/beautifulsoup4/}} & the library contains tools for viewing HTML or XML code\\
+Scrapy\footcite{\url{https://pypi.org/project/Scrapy/}} & is a fast framework for high-level web browsing\\
+Selenium\footcite{\url{https://pypi.org/project/selenium/}} & is a library that is a web driver\end{tabular}
 \end{table}
 \end{center}
 \end{frame}
 
 
 
-\section{Príklady využitia}
+\section{Exmaples of use in real life}
 % príkaz \ssection by vytvoril zvláštný slajd s názvom časti - v krátkych prezentáciách to prekáža, lebo oberá o čas
 
-\begin{frame}[fragile=singleslide]\frametitle{Príklady využitia}
-Všetky z týchto projektov využili Python a niektorú z uvedených knižníc:
+\begin{frame}[fragile=singleslide]\frametitle{Examples}
+The following projects used Python and one of the libraries listed: 
 \begin{itemize}
 \item Phishing Web Page Detection using web Scraping
 \item Food Genie, Recipe Search Algorithm using Web Scraping
@@ -149,14 +148,14 @@ Všetky z týchto projektov využili Python a niektorú z uvedených knižníc:
 \end{frame}
 
 
-\section{Príklad}
-\begin{frame}[fragile=singleslide]\frametitle{Jednoduchý príklad}
+\section{Example code}
+\begin{frame}[fragile=singleslide]\frametitle{Simple example}
 \begin{poznamka}
-Vypísanie názvu stránky pomocou knižnice Beautiful Soup
+Listing the page title using the Beautiful Soup library
 \end{poznamka}
 
 \begin{itemize}
-\item Program
+\item CODE
 
 \begin{program}
 \begin{lstlisting}
@@ -170,7 +169,7 @@ print(soup.title.string)
 \end{lstlisting}
 \end{program}
 
-\item Výstup
+\item Output
 \begin{vystup}
 \begin{lstlisting}
 Google
@@ -180,15 +179,22 @@ Google
 \end{itemize}
 \end{frame}
 
+\begin{frame}[fragile=singleslide]\frametitle{This solution can be used on multiple sites}
+
+\includegraphics[scale=0.45]{tabulka.png}
+
+\end{frame}
 
 
-\section*{Zhodnotenie a ďalšia práca}
+
+\section*{Conclusion}
 % hviezdička zabezpečí, aby sa táto časť neocitla v prehľade prezentácie - každá prezentácia má zhodnotenie a prehľad by sa tým zbytočne zahlcoval
 
-\begin{frame}[fragile=singleslide]\frametitle{Zhodnotenie a ďalšia práca}
+\begin{frame}[fragile=singleslide]\frametitle{Conclusion}
 \begin{itemize}
-\item Každá prezentácia musí byť nejako uzavretá
-\item Ale vždy je čo robiť ďalej\ldots{}
+\item the Python programming language is widely used in this area
+\item we can use one of the listed libraries to extract data from the web 
+\item we can then use the data for further processing 
 \end{itemize}
 \end{frame}
 
